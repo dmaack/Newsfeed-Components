@@ -85,6 +85,33 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Adding my first JavaScript Article',
+    date: 'Sept, 4 2019',
+    firstParagraph: `Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built! `,
+
+    secondParagraph: `Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built! `,
+
+    thirdParagraph: `Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built!`
+  },
+  {
+    title: 'Adding my SECOND JavaScript Article',
+    date: 'Sept, 4 2019',
+    firstParagraph: `Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles `,
+
+    secondParagraph: `Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles `,
+
+    thirdParagraph: `Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles`
+  },
+  {
+    title: 'LAST JavaScript Article',
+    date: 'Sept, 4 2019',
+    firstParagraph: `This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition `,
+
+    secondParagraph: `This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition `,
+
+    thirdParagraph: `This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition`
   }
 ];
 
@@ -112,3 +139,45 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+const articles = document.querySelector('.articles');
+
+function createArticles(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+  const article = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const dateOfArticle = document.createElement('p');
+  const paragraphOne = document.createElement('p');
+  const paragraphTwo = document.createElement('p');
+  const paragraphThree = document.createElement('p');
+  const buttonExpand = document.createElement('span');
+
+  article.appendChild(articleTitle);
+  article.appendChild(dateOfArticle);
+  article.appendChild(paragraphOne);
+  article.appendChild(paragraphTwo);
+  article.appendChild(paragraphThree);
+  article.appendChild(buttonExpand);
+
+  article.classList.add('article');
+  dateOfArticle.classList.add('date');
+  buttonExpand.classList.add('expandButton');
+
+
+  articleTitle.textContent = title;
+  dateOfArticle.textContent = date;
+  paragraphOne.textContent = firstParagraph;
+  paragraphTwo.textContent = secondParagraph;
+  paragraphThree.textContent = thirdParagraph;
+  buttonExpand.textContent = '\u25bc';
+
+  buttonExpand.addEventListener('click' , (e) => {
+    article.classList.toggle('article-open');
+    
+
+  });
+
+  return article;
+}
+
+data.forEach(item => {
+  articles.appendChild(createArticles(item.title, item.date, item.firstParagraph, item.secondParagraph, item.thirdParagraph));
+})
