@@ -33,21 +33,20 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
 const header = document.querySelector('.header');
 const menuButton = document.querySelector('.menu-button');
 
 function createMenu(array) {
   const menu = document.createElement('div');
   const uList = document.createElement('ul');
-  
-  
+  // creating li tag list items, appending to parent, and calling string items
   array.forEach(item => {
     let listItem = document.createElement('li');
     uList.appendChild(listItem);
     listItem.textContent = item;
   })
 
-  header.appendChild(menu);
   menu.appendChild(uList);
 
   menu.classList.add('menu');
@@ -61,5 +60,4 @@ function createMenu(array) {
 
 }
 
-createMenu(menuItems);
-// menuButton.appendChild(createMenu(menuItems));
+header.appendChild(createMenu(menuItems));
