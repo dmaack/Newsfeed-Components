@@ -161,11 +161,19 @@ function createArticles(title, date, firstParagraph, secondParagraph, thirdParag
   dateOfArticle.classList.add('date');
   buttonExpand.classList.add('expandButton');
 
+
   articleTitle.textContent = title;
   dateOfArticle.textContent = date;
   paragraphOne.textContent = firstParagraph;
   paragraphTwo.textContent = secondParagraph;
   paragraphThree.textContent = thirdParagraph;
+  buttonExpand.textContent = '\u25bc';
+
+  buttonExpand.addEventListener('click' , (e) => {
+    article.classList.toggle('article-open');
+    
+
+  });
 
   return article;
 }
