@@ -85,6 +85,33 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Adding my first JavaScript Article',
+    date: 'Sept, 4 2019',
+    firstParagraph: `Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built! `,
+
+    secondParagraph: `Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built! `,
+
+    thirdParagraph: `Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built!`
+  },
+  {
+    title: 'Adding my SECOND JavaScript Article',
+    date: 'Sept, 4 2019',
+    firstParagraph: `Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles `,
+
+    secondParagraph: `Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles `,
+
+    thirdParagraph: `Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles Part 2: Add Articles`
+  },
+  {
+    title: 'LAST JavaScript Article',
+    date: 'Sept, 4 2019',
+    firstParagraph: `This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition `,
+
+    secondParagraph: `This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition `,
+
+    thirdParagraph: `This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition This is my last addition`
   }
 ];
 
